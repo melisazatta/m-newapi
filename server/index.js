@@ -13,6 +13,8 @@ server.use(cors())
 server.use("/users", require("./users/usersRoute"))
 server.use("/posts", require("./posts/postRoute"))
 
+server.get("/", (req, res)=> res.send("MZ API"))
+
 
 //404
 server.use((req, res, next) => {
